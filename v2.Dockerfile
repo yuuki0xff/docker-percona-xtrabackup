@@ -1,7 +1,10 @@
+# Percona XtraBackup v2.4.x
+# If you administer MySQL v8.x or later, use yuuki0xff/percona-xtrabackup:8 (or build the docker image from v8.Dockerfile).
+
 FROM debian:buster
 LABEL  maintainer "yuuki0xff <yuuki0xff@gmail.com>"
 ARG DEBIAN_VERSION=buster
-ARG URL=https://www.percona.com/downloads/Percona-XtraBackup-LATEST/Percona-XtraBackup-8.0-8/binary/debian/buster/x86_64/percona-xtrabackup-80_8.0.8-1.buster_amd64.deb
+ARG URL=https://www.percona.com/downloads/Percona-XtraBackup-2.4/Percona-XtraBackup-2.4.17/binary/debian/buster/x86_64/percona-xtrabackup-24_2.4.17-1.buster_amd64.deb
 
 RUN set -euv && \
 	apt-get update && \
@@ -10,6 +13,7 @@ RUN set -euv && \
 		libcurl4-openssl-dev \
 		rsync \
 		libaio1 \
+		libatomic1 \
 		libcurl4 \
 		libev4 \
 		wget && \
