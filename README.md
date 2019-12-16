@@ -10,7 +10,7 @@ docker run --rm \
 	-v /etc/mysql:/etc/mysql:ro \
 	-v /var/lib/mysql:/var/lib/mysql:ro \
 	-v /run:/run:ro \
-	yuuki0xff/percona-xtrabackup xtrabackup --backup --stream -uroot
+	yuuki0xff/percona-xtrabackup xtrabackup --backup --stream xbstream --uroot
 ```
 
 
